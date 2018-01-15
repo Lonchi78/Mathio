@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //  Firebase
         //  Get UI elements
         mTextView = findViewById(R.id.tv_try);
         mButton1 = findViewById(R.id.btn_try1);
