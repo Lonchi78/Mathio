@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "525945413960",
+    "firebase_url": "https://mathio-361e6.firebaseio.com",
+    "project_id": "mathio-361e6",
+    "storage_bucket": "mathio-361e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525945413960:android:799db539de85fd9c",
+        "android_client_info": {
+          "package_name": "com.lonchi.andrej.mathio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525945413960-rsqvgh181kc75hlkhjp0g93acen7t1ge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lonchi.andrej.mathio",
+            "certificate_hash": "7c754495fe5ad5f51bad42971880fc9765a4247f"
+          }
+        },
+        {
+          "client_id": "525945413960-m6h8tuhu000q4cfdcln7ppic8pojuehm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbGGB-V4pe9w6skF3tOIw9mF_XN4myVk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525945413960-m6h8tuhu000q4cfdcln7ppic8pojuehm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
