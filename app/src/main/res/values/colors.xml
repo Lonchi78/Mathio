@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">@color/darkestPurple</color>
     <color name="colorPrimaryDark">@color/darkPurple</color>
-    <color name="colorAccent">@color/lightPink</color>
+    <color name="colorAccent">@color/lightPurple</color>
 
     <color name="darkPurple">#413a60</color>
     <color name="lightPurple">#865fc1</color>

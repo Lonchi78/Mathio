@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Mathio</string>
 
-    <string name="quick_maths">QUICK MATHS</string>
-    <string name="copyright">ANDREJ LONČÍK 2018 ©</string>
+    <string name="random_quote_1">Quick maths</string>
+    <string name="copyright">Andrej Lončík 2018 ©</string>
+    <string name="true_s">True</string>
+    <string name="false_s">False</string>
+
 </resources>
