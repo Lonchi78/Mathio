@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.Window;
@@ -29,14 +30,12 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView mTextView;
-    Button mButton1;
-    Button mButton2;
     int themeId;
     ImageButton iconPlay;
 
     //  Celkovy koren realtime databazy
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+
     //  Odkaz ku premennej "condition", ktora je pod mRootRef
     DatabaseReference mConditionRef = mRootRef.child("condition");
 
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         //  Generovanie temy (resp. farebneho prevedenia)
         Random generator = new Random();
-        int themeId = generator.nextInt(5);
+        themeId = generator.nextInt(5);
         switch (themeId){
             case 0:
                 setTheme(R.style.AppTheme1);
@@ -67,14 +66,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startAnimations();
-
-        //  Firebase
-        //  Get UI elements
-        /*
-        mTextView = findViewById(R.id.tv_try);
-        mButton1 = findViewById(R.id.btn_try1);
-        mButton2 = findViewById(R.id.btn_try2);
-        */
 
     }
 
@@ -108,9 +99,20 @@ public class MainActivity extends AppCompatActivity {
         iconPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //  Spustenie hry - nova aktivita
                 Intent intentGameAct = new Intent(MainActivity.this, ActivityGame.class);
+
+                //  Animacie, deklaracia
+                final ActivityOptions[] activityOptions = new ActivityOptions[1];
+
+                //  Priradenie ...  (.this, ...('id animovaneho objektu'), 'nazov objektu transitionName')
+                activityOptions[0] = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                        new Pair<>(findViewById(R.id.main_iv_mathio), "transition_mathio_name"));
+
+                //  Informacie dodatocne (id temy)
                 intentGameAct.putExtra("themeId", themeId);
-                startActivity(intentGameAct);
+
+                startActivity(intentGameAct, activityOptions[0].toBundle());
             }
         });
 

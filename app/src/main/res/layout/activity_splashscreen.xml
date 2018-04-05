@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/splash_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/splashscreen_ll_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:id="@+id/splashscreen_ll_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/random_quote_1"
+            android:textColor="@color/lightestPurple"
+            android:textSize="14sp"
+            android:id="@+id/splashscreen_tv_qm"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="190dp"
+            android:adjustViewBounds="true"
+            android:transitionName="transition_mathio_name"
+            android:background="@drawable/ic_mathio_name_white"
+            android:id="@+id/splashscreen_iv_mathio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/splash_mountains"
+        android:id="@+id/splashscreen_ll_bottom">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/copyright"
+                android:textColor="@color/lightestPurple"
+                android:textSize="10sp"
+                android:id="@+id/splashscreen_tv_cr"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

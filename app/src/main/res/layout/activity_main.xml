@@ -39,7 +39,9 @@
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:transitionName="transition_mathio_name"
-                android:background="@drawable/ic_mathio_name_white" />
+                android:background="@drawable/ic_mathio_name_white"
+                android:id="@+id/main_iv_mathio"/>
+
         </LinearLayout>
 
         <LinearLayout
